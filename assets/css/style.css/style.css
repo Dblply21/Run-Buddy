@@ -93,7 +93,7 @@ header {
       padding: 60px;}
       /* Hero Style Start */
 .hero {
-  background-image: url ("./images/hero-bg.jpg");
+  background-image:("assets\images\hero-bg.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -255,8 +255,45 @@ flex: 12;
   color: var(--primary-color);
   flex: 1;
 }
-.trainer img {
+.trainer-img {
   width: 100%;
+  min-height: 300px;
+  background-size: cover;
+  display: flex;
+  padding: 15px;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+.trainer-img::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(252, 225, 56, 0.3), var(--secondary-color));
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+.trainer-img h3 {
+  position: relative;
+  z-index: 1;
+  font-size: 28px;
+  margin-bottom: 5px;
+  top: 200px;
+  transition: 0.6s;
+}
+.trainer-img h4 {
+  position: relative;
+  z-index: 1;
+  font-size: 22px;
+  top: 200px;
+  transition: 0.6s;
+  transition-delay: .2s;
+}
+.trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
+  top: 0;
 }
 .trainer-bio {
   padding: 25px;
@@ -281,7 +318,15 @@ flex: 12;
 }
 .trainer-bio p {
   font-size: 17px;
-
+}
+.trainer-1 {
+  background-image: url("../images/trainer-1.jpg"); 
+}
+.trainer-2 {
+  background-image: url("/assets/images/trainer-2.jpg");
+}
+.trainer-3 {
+  background-image: url("../images/trainer-3.jpg");
 }
 .trainers {
   width: 100%;
@@ -290,6 +335,7 @@ flex: 12;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 /* REACH OUT STYLES START */
 .contact {
   text-align: center;
